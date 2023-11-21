@@ -1,0 +1,237 @@
+/* Reset de estilos e estilos globais */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins-ExtraLight', sans-serif; /* Use a fonte que você selecionou */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header, section, footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Define as variáveis de cor para fácil ajuste */
+:root {
+    --cor-fundo-header: #000000; /* Cor de fundo do cabeçalho */
+    --cor-hover-header: rgb(49, 49, 49); /* Cor de fundo do cabeçalho no hover */
+}
+
+header {
+    background-color: var(--cor-fundo-header);
+    color: #fff; /* Cor do texto no cabeçalho */
+    text-align: center;
+}
+
+header:hover {
+    background-color: var(--cor-hover-header);
+}
+
+/* Pseudo-elemento ::before para adicionar efeito de gradiente e opacidade */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, var(--cor-fundo-header), var(--cor-hover-header));
+    opacity: 0.8;
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out; /* Adiciona a transição para a opacidade */
+}
+
+header:hover::before {
+    opacity: 1;
+    background: linear-gradient(to left, var(--cor-fundo-header), var(--cor-hover-header), var(--cor-fundo-header)); /* Gradiente nas laterais */
+}
+
+/* Adiciona animação Typewriter ao texto */
+#typewriter-text.center {
+    text-align: center; /* Centraliza o texto */
+    margin: 0 auto; /* Garante que o texto esteja centralizado horizontalmente */
+    overflow: hidden; /* Para garantir que o texto seja cortado corretamente */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    letter-spacing: 2px; /* Espaçamento entre as letras */
+    animation: typing 3s steps(40, end); /* Define a animação Typewriter */
+}
+
+/* Animação Typewriter */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+img {
+    display: block; /* Alterado para block */
+    margin: 0 auto; /* Adicionado para centralizar horizontalmente */
+    position: relative;
+}
+
+
+h1 {
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #000000; /* Cor dos títulos das seções */
+}
+
+section {
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Garante que a janela modal está sobre o conteúdo */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+}
+
+.modal-open {
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Largura da janela modal */
+    max-width: 800px; /* Largura máxima da janela modal */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Adiciona posição relativa para o botão de fechar */
+}
+
+/* Botão de fechar */
+.close {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Botão de fechar */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001; /* Garante que o botão de fechar está sobre o conteúdo */
+    color: #000; /* Cor do botão de fechar */
+}
+}
+
+/* Adicione estilos específicos para a seção "Sobre Mim" */
+#about .content {
+    display: none;
+    overflow: hidden;
+    display: flex; /* Usando flex para posicionar o conteúdo à esquerda/direita */
+}
+
+#about .content .text-content {
+    flex: 1; /* Ocupa todo o espaço disponível à esquerda */
+}
+
+#about .content .photo-container {
+    width: 40%;
+    margin-left: 20px;
+}
+
+#about .content img {
+    width: 100%;
+    height: auto;
+}
+
+/* Adicione uma linha vertical entre o texto e a imagem */
+#about .content::before {
+    content: "";
+    border-left: 1px solid #ccc;
+    height: 100%;
+    margin-right: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #333; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto no rodapé */
+    padding: 10px 0;
+}
+
+/* Adicione estilos específicos para a seção "Sobre Mim" */
+#about .content {
+    display: none;
+    overflow-y: hidden; /* Inicia sem barra de rolagem */
+}
+
+#about.open .content {
+    display: flex;
+    overflow-y: auto; /* Adiciona barra de rolagem quando a seção estiver aberta */
+}
+
+#about .text-and-image-container {
+    display: flex; /* Coloca o texto e a imagem em linha */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: space-between; /* Adiciona espaço entre o texto e a imagem */
+}
+
+#about .text-content {
+    flex: 1; /* Ocupa todo o espaço disponível à esquerda */
+    text-align: center; /* Centraliza o texto */
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+    max-height: 800px; /* Define a altura máxima do conteúdo com a barra de rolagem */
+}
+
+#about .photo-container {
+    width: 40%;
+    margin-left: 20px;
+}
+
+#about .photo-container img {
+    width: 100%;
+    height: auto;
+}
+
+#contact .content {
+    display: none;
+    overflow-y: auto;
+}
+
+#contact.open .content {
+    display: flex;
+    overflow-y: auto;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}

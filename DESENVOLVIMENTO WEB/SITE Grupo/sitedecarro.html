@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Site de Carros</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header_container">
+            <div class="navbar">
+                <div class="container navbar_container">
+                    <div class="navbar_esquerda">
+                        <div class="hamburguer_menu" onclick="toggleMenu()">
+                            <div class="hamburguer">&#9776;</div>
+                        </div>
+                    </div>
+                    <div class="navbar_logo_link">
+                        Site de Carros
+                    </div>
+                    <div class="navbar_direita">
+                        <a class="navbar_item" href="https://www.google.com.br">Estoque</a>
+                        <div class="navbar_item pesquisar" onclick="openGoogle()">
+                            Pesquisar <span class="icone-lupa"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Classe menu -->
+            <div class="menu">
+                <span class="fechar_menu" onclick="toggleMenu()">&times;</span>
+                <a class="navbar_link" href="https://novoportal.cruzeirodosul.edu.br/">Home</a>
+                <a class="navbar_link" href="https://web.whatsapp.com/">Estoque</a>
+                <a class="navbar_link" href="https://filmesviatorrents.site/">Quem somos</a>
+                <a class="navbar_link" href="https://supertvaovivo.tv/">Contato</a>
+            </div>
+        </div>
+
+        <!-- Carrossel -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel_slide">
+                    <img src="https://www.wallpaperup.com/uploads/wallpapers/2015/03/25/645526/ae637e1d3a1b0ffbb1e4812a23c9b503.jpg" alt="Carro 1">
+                </div>
+                <div class="carousel_slide">
+                    <img src="https://3.bp.blogspot.com/-ag1-CsR5I6o/XHu9Vv_hDwI/AAAAAAAATXk/Bmn0-7lajecIjP1lQt9uMXUMqZX1s5tdwCLcBGAs/s1600/Toyota-Corolla-2020%2B%252813%2529.jpeg" alt="Carro 2">
+                </div>
+                <div class="carousel_slide">
+                    <img src="https://th.bing.com/th/id/R.402de87ee3a4a57e648ea48628ebb4e5?rik=UkDqBsoBKG30gQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fwp1845374.jpg&ehk=WqM3woviV6QMs3oQ9kpafJqz5TsBhwsA%2fNAm%2fPoVzuQ%3d&risl=&pid=ImgRaw&r=0" alt="Carro 3">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

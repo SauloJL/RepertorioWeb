@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saulo Jorrã de Lima - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Seção de cabeçalho -->
+    <header>
+        <h1>Saulo Jorrã de Lima</h1>
+        <p id="typewriter-text" class="center">Análise e Desenvolvimento de Sistemas</p>
+    </header>
+
+    <!-- Seção sobre você -->
+    <section id="about" class="expandable-section">
+        <h2 onclick="toggleContent(this)">Sobre Mim</h2>
+        <div class="content">
+            <div class="text-content">
+                <br><p>Estudante de Análise e Desenvolvimento de Sistemas; atualmente trabalho como motorista no transporte coletivo, sou formado em Socorrista - Técnico De Enfermagem.</p><br>
+                <p>Continuo me qualificando para buscar melhores oportunidades de trabalho e me desenvolver profissionalmente. Aprendendo e buscando conhecimento em diferentes áreas como: Saúde, Transporte e Tecnologia.</p><br>
+                <p>Sou apreciador também da área Gastronômica, onde também me atrai interesse em seguir ou me envolver para aprimorar conhecimento e habilidades na cozinha, ou até mesmo como um hobby, por exemplo.</p><br><hr>
+                <br>
+                <img src="Imagens\SJL Soldado.jpg" alt="saulo rosto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de projetos -->
+    <section id="projects" class="expandable-section">
+        <h2>Projetos Recentes</h2>
+        <!-- Adicione informações e links para seus projetos aqui -->
+    </section>
+
+    <!-- Seção de contato -->
+    <section id="contact" class="expandable-section">
+        <h2>Contato</h2>
+        <div class="content">
+            <div class="contact-info">
+                <p>Telefone: (41) 98817-5042</p>
+                <p>Facebook: <a href="https://www.facebook.com/profile.php?id=100004812582426&mibextid=ZbWKwL" target="_blank">Seu Perfil no Facebook</a></p>
+                <p>Instagram: <a href="https://www.instagram.com/_osaulolima/?igshid=MWd5bm5kdmEzODZoZQ%3D%3D" target="_blank">Seu Perfil no Instagram</a></p>
+            </div>
+            <!-- Adicione um formulário de contato ou outras informações aqui -->
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <!-- Conteúdo da janela modal -->
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-content">
+                <!-- Conteúdo da seção "Sobre Mim" dentro da modal -->
+                <br><p>Estudante de Análise e Desenvolvimento de Sistemas; atualmente trabalho como motorista no transporte coletivo, sou formado em Socorrista - Técnico De Enfermagem.</p><br>
+                <p>Continuo me qualificando para buscar melhores oportunidades de trabalho e me desenvolver profissionalmente. Aprendendo e buscando conhecimento em diferentes áreas como: Saúde, Transporte e Tecnologia.</p><br>
+                <p>Sou apreciador também da área Gastronômica, onde também me atrai interesse em seguir ou me envolver para aprimorar conhecimento e habilidades na cozinha, ou até mesmo como um hobby, por exemplo.</p><br><hr>
+                <!-- Mantenha o mesmo conteúdo que você já tem -->
+                <h2>Sobre Mim</h2>
+                <div class="container">
+                    <div class="text-content">
+                        <!-- ... Seu texto ... -->
+                    </div>
+                    <div class="image">
+                        <img src="Imagens\SJL Soldado.jpg" alt="fotosaulo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção de rodapé -->
+    <footer>
+        <p>&copy; 2023 Saulo Jorrã de Lima. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Adicione scripts JavaScript aqui, se necessário -->
+    <script src="javascript.js"></script>
+</body>
+</html>
